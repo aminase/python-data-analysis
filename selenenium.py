@@ -20,19 +20,24 @@ driver = webdriver.Chrome(service=service)
 
 driver.get("https://google.com")
 
-WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CLASS_NAME, "gLFyf")))
-input_element = driver.find_element(By.CLASS_NAME, "gLFyf")
-input_element.clear()
-input_element.send_keys("Tech with tim" + Keys.ENTER)
-
-WebDriverWait(driver, 5).until(
-    EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "Tech With Tim")))
+# WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CLASS_NAME, "gLFyf")))
+# input_element = driver.find_element(By.CLASS_NAME, "gLFyf")
 
 
-link = driver.find_element(By.PARTIAL_LINK_TEXT, "Tech with Tim")
+# google_search = driver.find_element(By.XPATH, "//div/center/input[@name ='btnI']")
+
+# input_element.clear()
+# input_element.send_keys("Tech with tim" + Keys.ENTER)
+
+# WebDriverWait(driver, 5).until(
+#     EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "Tech With Tim")))
+
+
+link = driver.find_element(By.CLASS_NAME, "pHiOh")
 link.click()
+# print(link.text)
 
-time.sleep(10)
+time.sleep(15)
 driver.quit()
 
 
