@@ -35,7 +35,7 @@ driver.get("https://google.com")
 
 link = driver.find_element(By.CLASS_NAME, "pHiOh")
 link.click()
-# print(link.text)
+print(link.text)
 
 time.sleep(15)
 driver.quit()
